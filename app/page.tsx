@@ -1,69 +1,74 @@
 import Image from "next/image";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main id="home" className="flex-1 bg-[#faf9f6] text-neutral-900">
+      <section className="mx-auto grid min-h-[64vh] max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1fr_0.9fr] md:gap-14 md:py-20">
+        <div>
+          <p className="mb-6 text-[11px] font-medium tracking-[0.24em] text-[#9b713e]">
+            A MORE PERSONAL KIND OF PRESTIGE
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+          <h1 className="max-w-3xl font-serif text-5xl leading-[1.08] sm:text-6xl">
+            Curated with care.
+            <br />
+            Chosen for you.
+          </h1>
+          <p className="mt-6 max-w-lg text-base leading-7 text-neutral-600">
+            Discover a considered collection and attentive service, shaped around what matters to you.
+          </p>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#collection"
+            className="mt-9 inline-flex min-h-12 w-fit items-center bg-neutral-900 px-6 text-xs font-medium tracking-widest text-white transition-colors hover:bg-[#8b6334]"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            EXPLORE THE COLLECTION
           </a>
         </div>
-      </main>
-    </div>
-  );
+        <div className="relative aspect-square w-full overflow-hidden bg-[#2d1b13]">
+          <Image
+            src="/watch.jpg"
+            alt="Gold-accented watch with a black dial and strap"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 45vw"
+            className="object-cover"
+          />
+        </div>
+      </section>
+
+      <section id="collection" className="scroll-mt-24 border-t border-neutral-200 bg-white px-5 py-20 sm:px-8">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-[10px] tracking-[0.22em] text-[#9b713e]">01 / THE COLLECTION</p>
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl">Distinctive by nature.</h2>
+        </div>
+      </section>
+
+      <section id="services" className="scroll-mt-24 border-t border-neutral-200 px-5 py-20 sm:px-8">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-[10px] tracking-[0.22em] text-[#9b713e]">02 / OUR SERVICES</p>
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl">Considered at every step.</h2>
+        </div>
+      </section>
+
+      <section id="story" className="scroll-mt-24 border-t border-neutral-200 bg-white px-5 py-20 sm:px-8">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-[10px] tracking-[0.22em] text-[#9b713e]">03 / ATLAS PRESTIGE</p>
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl">A more thoughtful standard.</h2>
+        </div>
+      </section>
+
+      <section id="contact" className="scroll-mt-24 border-t border-neutral-200 bg-neutral-900 px-5 py-16 text-white sm:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div>
+            <p className="text-[10px] tracking-[0.22em] text-[#d0a56e]">BEGIN A CONVERSATION</p>
+            <h2 className="mt-3 font-serif text-3xl">We would be glad to help.</h2>
+          </div>
+          <a href="mailto:hello@atlasprestige.com" className="text-sm text-white underline decoration-[#d0a56e] underline-offset-4">
+            hello@atlasprestige.com
+          </a>
+        </div>
+      </section>
+    </main>
+  )
 }
+
+export default Home
